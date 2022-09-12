@@ -1,0 +1,193 @@
+---
+layout: page
+title: Recruitment
+---
+<!--
+<form action="#" method="POST">
+    <div class="form-group row">
+        <div class="col-md-6">
+            <input class="form-control" type="text" name="name"
+                   placeholder="Name">
+        </div>
+        <div class="col-md-6">
+            <input class="form-control" type="email" name="_replyto"
+                   placeholder="E-mail Address">
+        </div>
+    </div>
+    <textarea rows="8" class="form-control mb-3" name="message"
+              placeholder="Message"></textarea>
+    <input class="btn btn-success" type="submit" value="Send">
+</form>-->
+<head>
+    <style>
+        .pic {
+            background: url(/assets/images/카카오톡2.png);
+            filter: brightness(100%);
+        }
+
+            .pic:hover {
+                filter: brightness(85%);
+            }
+
+        .pic2 {
+            background: url(/assets/images/telegram.png);
+            filter: brightness(100%);
+        }
+
+            .pic2:hover {
+                filter: brightness(85%);
+            }
+
+        #comasc {
+            display: none;
+        }
+    </style>
+</head>
+
+<br>
+<br><center> <h2>추후 공지</h2> <br> <h3>추후 안내 예정입니다.</h3>
+<iframe src="assets/document/recruitment.pdf"
+        width="820" height="1200" frameborder="0" marginheight="0" marginwidth="0">
+    로드 중…
+</iframe> </center>
+<br><br><br>
+
+<!--
+<h4>&nbsp;&nbsp;메일 문의 </h4>
+<div style="float:left; width:61px; height:70px; padding:6px 0;">
+    <button type="button" class="btm_image" id="img_btn" onclick="location.href='mailto:revision6@proton.me' "
+            style="background-color:transparent; border-color:transparent; color:transparent; ">
+        <img src="/assets/images/mail.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+    </button>
+</div>
+<div style="float:left; padding:0px 0; ">
+    <h5 style="display:inline; ">revision6@pm.me </h5><br>   <h5 id="text3" style=" display:inline">revision6@proton.me</h5>
+</div>
+<div style="float:left; width:56px; height:65px; padding:7px 0;">
+    <button type="button" class="btm_image" id="img_btn" onclick="copy3(); "
+            style="background-color:transparent; border-color:transparent; color:transparent; ">
+        <img src="/assets/images/copy.png" height="35" width="35" alt="copy" style="border-radius: 50%; cursor:pointer" class="pic2">
+    </button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <h4>&nbsp;&nbsp;암호화 메일</h4>
+
+    <button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='https://keys.openpgp.org/search?q=revision6%40proton.me' "
+            style="background-color:transparent; border-color:transparent; color:transparent; ">
+        <img src="/assets/images/cryptmail.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+    </button>
+
+
+    <h5 style="display:inline; word-break: keep-all; vertical-align:middle;">PGP 공개키를 다운로드 받아 암호화된 메일을 보낼 수 있습니다.</h5>
+
+  ///  <!--
+    <button id="mobiasc" type="button" class="btm_image" id="img_btn" onclick="window.location = 'assets/revision_public.asc' "
+            style="background-color:transparent; border-color:transparent; color:transparent; ">
+        <img src="/assets/images/download.png" height="32" width="32" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+    </button>    ///      --> 
+
+<!--
+
+    <button id="comasc1" type="button" class="btm_image" id="img_btn" onclick="location.href='https://keys.openpgp.org/vks/v1/by-fingerprint/7B4F522D8D1F5C854A1E53479D1CFC695EB11A7C' "
+            style="background-color:transparent; border-color:transparent; color:transparent; ">
+        <img src="/assets/images/download.png" height="32" width="32" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+    </button>
+
+</div>
+
+
+<br>
+<br>
+
+<h4>&nbsp;&nbsp;채팅 문의</h4>
+<button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='http://pf.kakao.com/_vxjFMxj' "
+        style="background-color:transparent; border-color:transparent; color:transparent; ">
+    <img src="/assets/images/카카오톡2.png" height="40" width="40" alt="KakaoTalk" style="border-radius: 50%; cursor:pointer" class="pic">
+</button>
+
+<button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='https://t.me/revision6'  "
+        style="background-color:transparent; border-color:transparent; color:transparent; ">
+    <img src="/assets/images/telegram.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+</button>
+
+
+<br>
+<br>
+<br>
+<div>
+    <h4>&nbsp;&nbsp;전화 상담</h4>
+</div>
+
+<button type="button" class="btm_image" id="img_btn" onclick="location.href='tel:010-4445-5551' "
+        style="background-color:transparent; border-color:transparent; color:transparent; ">
+    <img src="/assets/images/call.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+</button>
+
+<h5 id="text4" style="display:inline">010-4445-5551</h5>
+
+
+<button type="button" class="btm_image" id="img_btn" onclick="copy4(); "
+        style="background-color:transparent; border-color:transparent; color:transparent; ">
+    <img src="/assets/images/copy.png" height="35" width="35" alt="copy" style="border-radius: 50%; cursor:pointer" class="pic2">
+</button>
+<br>
+
+
+<button type="button" class="btm_image" id="img_btn" onclick="location.href='tel:0504-445-5551' "
+        style="background-color:transparent; border-color:transparent; color:transparent; ">
+    <img src="/assets/images/fax.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+</button>
+<h5 id="text5" style="display:inline">0504-445-5551</h5>
+
+<button type="button" class="btm_image" id="img_btn" onclick="copy5(); "
+        style="background-color:transparent; border-color:transparent; color:transparent; ">
+    <img src="/assets/images/copy.png" height="35" width="35" alt="copy" style="border-radius: 50%; cursor:pointer" class="pic2">
+</button>
+
+<br>
+<br>
+<br>
+
+
+<!-- <div>  <input type="button" value="복사" onclick="copy3()" /> --> <!-- <div id="text3" style="width:90%; ">revision6@protonmail.com</div> -->
+<!-- </div> -->
+
+<script>
+
+
+    function copy3() {  var obj = document.getElementById("text3");  var range = document.createRange();  range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
+    //range.setStart(obj.childNodes[0], 0);  //추가
+    //range.setEnd(obj.childNodes[0], 5);  //추가
+    var sel = window.getSelection();  sel.removeAllRanges();  //기존 선택정보 삭제
+    sel.addRange(range);  //텍스트 정보 선택
+    document.execCommand("copy");  //복사
+    sel.removeRange(range);  //선택 정보 삭제
+    alert("메일주소가 복사되었습니다.");
+    }
+
+    function copy4() {  var obj = document.getElementById("text4");  var range = document.createRange();  range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
+    //range.setStart(obj.childNodes[0], 0);  //추가
+    //range.setEnd(obj.childNodes[0], 5);  //추가
+    var sel = window.getSelection();  sel.removeAllRanges();  //기존 선택정보 삭제
+    sel.addRange(range);  //텍스트 정보 선택
+    document.execCommand("copy");  //복사
+    sel.removeRange(range);  //선택 정보 삭제
+    alert("전화번호가 복사되었습니다.");
+    }
+
+    function copy5() {  var obj = document.getElementById("text5");  var range = document.createRange();  range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
+    //range.setStart(obj.childNodes[0], 0);  //추가
+    //range.setEnd(obj.childNodes[0], 5);  //추가
+    var sel = window.getSelection();  sel.removeAllRanges();  //기존 선택정보 삭제
+    sel.addRange(range);  //텍스트 정보 선택
+    document.execCommand("copy");  //복사
+    sel.removeRange(range);  //선택 정보 삭제
+    alert("팩스 번호가 복사되었습니다.");
+    }
+
+
+</script>   

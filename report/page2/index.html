@@ -1,0 +1,38 @@
+---
+layout: page
+title: Security Report
+---
+
+<br><br>
+<!-- We reopen main-content and container -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Featured
+        ================================================== -->
+            <!-- Posts Index
+        ================================================== -->
+
+            <section class="featured-posts">
+                <div class="section-title">
+
+                </div>
+                <div class="row listfeaturedtag">
+                    {% for post in site.posts %}
+                    {% if post.report2 == true %}
+                    {% include featuredboxr.html %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </section>
+            <center>
+                <a href="/report"><h6 style="display:inline">1</h6>  </a> &nbsp;  <a href="/report/page2"><h5 style="display:inline">2</h5>  </a> 
+
+            </center>
+
+
+
+        </div>
+    </div>
+
+    
+        

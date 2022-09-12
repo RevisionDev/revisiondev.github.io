@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+    <title>{{ page.title }} - Revision</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i"
+          rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/user.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+    {% seo %}
+
+    {{site.sharethis}}
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', '{{site.google_analytics}}', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%
+endcapture %}
+<body class="{{ layout }}">
+    <!-- Begin Menu Navigation
+    ================================================== -->
+    <header class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                data-toggle="collapse" data-target="#navbarsWow"
+                aria-controls="navbarsWow" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                {% if site.logo == true %}
+                <img src="/assets/images/logo.png" alt="{{ site.name }}">
+                {% else %}
+                <span style="font-family:goodtime">Revision</span>
+                {% endif %}
+            </a>
+            <!-- End Logo -->
+            <!-- Begin Menu -->
+            <div class="collapse navbar-collapse" id="navbarsWow">
+
+                <!-- Begin Menu -->
+                <ul class="navbar-nav ml-auto">
+  
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/#private"><strong>민간 범죄</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/#org"><strong>기업·기관·정부</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/#org"><strong>대테러</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/#etc"><strong>교육·자문·정보관리</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/#etc"><strong>사회공헌</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/report"><strong>보안 보고서</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ site.baseurl }}/vision"><strong>비전</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link highlight" href="{{ site.baseurl }}/contact" style="font-family:NanumSquareRoundR; font-weight:bold;">상담 문의</a>
+                    </li>
+                </ul>
+                <!-- End Menu -->
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- End Menu Navigation
+    ================================================== -->
+
+    <div class="site-content">
+
+        <div class="container">
+
+            <!-- Site Title
+            ================================================== -->
+
+            <div class="mainheading" style="display:none;">
+                <h1 class="sitetitle">{{ site.name }}</h1>
+                <p class="lead">
+                    {{ site.description }}
+                </p>
+            </div>
+
+            <!-- Content
+            ================================================== -->
+            <div class="main-content">
+                {{ content }}
+            </div>
+
+        </div><!-- /.container -->
+        <!-- Before Footer
+        ================================================== -->
+        <style>
+            .acc2 {
+                background-color: #6b6b6b;
+                border-color: #6b6b6b;
+                color: #e6e6e6;
+            }
+
+            .acc2:hover {
+                background-color: #545454;
+                border-color: #545454;
+                color: #e6e6e6;
+            }
+
+            .ft2 {
+                font-family: Rubik, 'NanumSquareRoundR';
+                font-weight: bold;
+                line-height: 1;
+                font-size: 16px;
+                text-align: center;
+                word-break: keep-all;
+                color: #ffffff;
+            }
+        </style>
+        <div class="beforefooter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h3 style="line-height:1.5">Security Renovation with Revision</h3>
+                        
+                            <p style="font-family:NanumSquareRoundEB; font-size:16px; font-weight:normal; color:#f0f0f0; word-break:keep-all ">
+                                당한 후에 범인을 잡는 것보다 중요한 것은, 당하지 않는 것입니다.
+                                
+                            </p>
+                        <br>
+                        <a class="ft2 acc2 btn btn-primary btn-lg" href="/contact" target="_self">
+                           상담 문의
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-right footersocial">
+                        <h5>Connect with me</h5>
+                        <a href="https://www.youtube.com/channel/UCjY4R0fpuEQl2kh9iHn55QA" target="_blank " style="text-decoration-line: none;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/revision.kr/" target="_blank" style="text-decoration-line: none;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/RevisionSix/revisionsix.github.io" target="_blank" style="text-decoration-line: none;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin Footer
+        ================================================== -->
+    <style>        .jj {
+        line-height:1.5;
+        } </style>
+        <footer class="footer">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="footer-widget">
+                            <h5 class="title jj">Security Renovation</h5>
+                            <p style="line-height:1.5; word-break:keep-all">
+                                리비전은 전문적인 민간 보안컨설턴트로<br> 보안의 혁신을 추구합니다.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <script language="javascript">
+                        function showPopup() { window.open("/notice.html", "notice", "width=600, height=640, left=965, top=400"); }
+                        function showPopup2() { window.open("/license.html", "notice", "width=560, height=680, left=985, top=400"); }
+
+                    </script>
+
+                    <div class="col-sm-3">
+                        <div class="footer-widget">
+                            <h5 class="title">Menu</h5>
+                            <ul>
+                                <!--  <li>
+                        <a href="{{ site.baseurl }}/sitemap.xml">SiteMap</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/feed.xml">
+                            Live
+                            Feed
+                        </a>-->
+                                <li><a href="javascript:void(0);" onclick="showPopup();" attr-a="onclick : attr-a">공지사항</a></li>
+                                <li><a href="/privacypolicy">개인정보처리방침</a></li>
+                                <li><a href="/payment">결제 정보 안내</a></li>
+                                <li><a href="/recruitment">채용 및 인재상</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="footer-widget">
+                            <h5 class="title">Category</h5>
+                            <ul>
+                                <li><a href="/#business">사업 분야</a></li>
+                                <li><a href="{{ site.baseurl }}/report">보안 보고서</a></li>
+                                <li><a href="{{ site.baseurl }}/vision">비전</a></li>
+                                <li><a href="{{ site.baseurl }}/contact">상담문의</a></li>
+                                <!--     <li><a href="#">Tech</a></li>
+
+                    <li><a href="/category/blog/">Personal</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="footer-widget textwidget">
+                            <h5 class="title">First protect <br>First prevention </h5>
+                            <p style="line-height:1.5;word-break:keep-all">
+                                리비전은 당하고 대처하지 않습니다. <br>먼저 지키고 사전에 막겠습니다.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Please, leave credit to author unless you own a commercial license: https://www.wowthemes.net/freebies-license/ -->
+                <div class="copyright">
+                    <p class="pull-left">
+                        Made with <a href="https://jekyllrb.com"
+                                     target="_blank">
+                            Jekyll
+                        </a>&
+                        <a target="_blank"
+                           href="https://www.wowthemes.net/free-jekyll-template-affiliates/">
+                            Affiliate
+                            Theme
+                        </a> -
+
+                        <a href="javascript:void(0);" onclick="showPopup2();" attr-a="onclick : attr-a">
+                            License
+                        </a>
+
+
+
+
+                        <!--<img src="/assets/images/jekyll.png" width="32px"
+        height="32px" />-->
+
+                    </p>
+                    <p class="pull-right">
+
+
+
+                        Copyright © <a href="/"> Revision</a> - {{ site.time | date: "%Y" }}
+
+                    </p>
+                        <div class="clearfix"></div>
+                </div>
+
+            </div>
+          
+        </footer>
+        <!-- End Footer
+        ================================================== -->
+
+    </div> <!-- /.site-content> -->
+    <!-- JavaScript-->
+    <!--================================================== -->
+
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+
+    <script src="{{ site.baseurl }}/assets/js/user.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+
+    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script type='text/javascript'
+            src='{{ site.baseurl }}/assets/js/masonry.pkgd.min.js'></script>
+
+    <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
+
+
+    <!-- 상단으로 이동하기 버튼 -->
+    <div style="position:fixed; bottom:20px; right:20px; z-index:99;" class="btn_gotop">
+        <a href="#doz_header">
+            <img src="/assets/images/top.png" style="width:40px">
+        </a>
+    </div>
+
+
+    <style>
+        .btn_gotop {
+            display: none;
+            position: fixed;
+            bottom: 20px; /* 탑버튼을 화면의 가장 아래에서 몇 픽셀 떨어뜨릴 것인지 정하세요*/
+            right: 20px; /* 탑버튼을 화면의 가장 오른쪽에서 몇 픽셀 떨어뜨릴 것인지 정하세요*/
+            z-index: 999;
+            border: 0px solid #627289;
+            outline: none;
+            background-color: #627289;
+opacity:0.6;
+cursor: pointer;
+            padding: 0px 0px;
+            border-radius: 100%;
+            
+        }
+    </style>
+
+
+    <script>
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 600){
+        $('.btn_gotop').show();
+        } else{
+        $('.btn_gotop').hide();
+        }
+        });
+        $('.btn_gotop').click(function(){
+        $('html, body').animate({scrollTop:0},400);
+        return false;
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+# Site
+name: Revision
+description: Security Renovation
+meta_description: Security Renovation
+logo: /assets/images/logo.png
+favicon: /assets/images/favicon.ico
+paginate: 10
+baseurl: 
+email: 'revision6@proton.me'
+google_analytics: REVISION
+disqus:
+sharethis:
+
+# Authors
+authors:
+  Revision:
+    name: Revision
+    display_name: Revision
+    image: /assets/images/logo.png
+    email: revision6@proton.me
+    web: https://revision.kr
+    twitter:
+    description: Reaverty
+
+  Reaver:
+    name: Reaver
+    display_name: Reaver
+    image: /assets/images/reaver.png
+    email: revision6@proton.me
+    web: https://www.youtube.com/channel/UCjY4R0fpuEQl2kh9iHn55QA
+    twitter:
+    description: Reaver
+
+# Plugins
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+permalinks: pretty
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: 'category/:name/'
+
+# Other
+markdown: kramdown
+highlighter: rouge
+
+# SEO
+twitter:
+  username: Revision
+  card: summary
+
+facebook:
+  app_id:
+  publisher: Revision
+  admins:
+
+social:
+name: Revision
+links:
+    - https://twitter.com/
+    - https://www.facebook.com/
+    - https://www.linkedin.com/
+    - https://github.com/revisionsix

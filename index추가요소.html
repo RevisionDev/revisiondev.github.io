@@ -1,0 +1,107 @@
+---
+layout: default
+title: Security Renovation
+---
+</div>
+</div>
+<!-- We've temporary closed main-content and container to have a full width intro -->
+<!-- Home Jumbotron
+================================================== -->
+<section class="intro">
+    <center>
+        <br>
+        <img src="/assets/images/logo.png" style="border-radius: 50%"
+             height="250" width="250" alt="Loading...">
+        <br><br>
+        <h1 style="color:dimgrey; font-family:'goodtime';">Revision</h1>
+        <br>
+        <h3 style="color:gray;font-family:'goodtime';"> Private Security Consultant</h3>
+        
+        <!--<a href="/about/" class="btn" style="color:white">View More about me</a>-->
+    </center>
+</section>
+
+<!-- We reopen main-content and container -->
+<div class="container">
+    <div class="main-content">
+        <!-- Featured
+    ================================================== -->
+        <section class="featured-posts">
+            <div class="section-title">
+                <h2><span>사업 분야</span></h2>
+            </div>
+            <div class="row listfeaturedtag">
+                {% for post in site.posts %}
+                {% if post.featured == true %}
+                {% include featuredbox.html %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+
+
+        <section class="featured-posts">
+            <div class="section-title">
+                <h2><span>공지 사항</span></h2>
+            </div>
+            <div class="row listfeaturedtag">
+                {% for post in site.posts %}
+                {% if post.featured2 == true %}
+                {% include featuredbox2.html %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+
+
+        <section class="featured-posts">
+            <div class="col-sm-8">
+                <div class="section-title">
+                    <h2><span>공지 사항2</span></h2>
+                </div>
+                <div class="masonrygrid row listrecent">
+                    {% for post in site.posts %}
+                    {% if post.featured3 == true %}
+                    {% include featuredbox3.html %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+             </div>
+</section>
+
+
+        <!-- Posts Index
+    ================================================== -->
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page > 0 %}
+        <div id="jumptopageof"></div>
+        {% endif %}
+        {% endif %}
+        <section class="recent-posts row">
+            <div class="col-sm-8">
+                <div class="section-title">
+                    <h2><span>보안 보고서</span></h2>
+                </div>
+                <div class="masonrygrid row listrecent">
+                    {% for post in paginator.posts %}
+                    {% unless post.featured == true %}
+                    {% unless post.featured2 == true %}
+                    {% unless post.featured3 == true %}
+                    {% include postbox.html %}
+                    {% endunless %}{% endunless %}{% endunless %}
+                    {% endfor %}
+                </div>
+                <!--  언리스 하나당 엔드언리스 하나 추가                    -->
+                <!-- Pagination -->
+                <div class="bottompagination">
+                    <span class="navigation" role="navigation">
+                        {% include pagination.html %}
+                    </span>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-sm-4">
+                {% include sidebar.html %}
+            </div>
+        </section>

@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        .pic2:hover {
+            color: forestgreen;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <span style=" font-size:16px;  font-weight:bold;  ">댓글 보기</span>
+    <input id="pc" type="button" style="background-color:transparent; border:none; cursor:pointer; font-size:15px; font-weight:bold;  font-family:NanumSquareRoundB; " class="pic2" value="댓글보기" onclick="window.open('about:blank').location.href='https://revisionsix.tistory.com/1#comment13304040' " />
+    <input id="mb" type="button" style="background-color:transparent; border:none; cursor:pointer; font-size:15px; font-weight:bold;  font-family:NanumSquareRoundB; " class="pic2" value="댓글보기" onclick="window.open('about:blank').location.href='https://revisionsix.tistory.com/m/1/comments' " />
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="detectmobilebrowser.js"></script>
+    <script>
+        console.log(jQuery.browser.mobile);
+        // alert(jQuery.browser.mobile);
+        $(function(){
+        if(jQuery.browser.mobile == true){
+        document.getElementById("pc").style.display = "none";
+        document.getElementById("mb").style.display = "";
+
+        }else{//조건 1이 아닐떄
+        document.getElementById("pc").style.display = "";
+        document.getElementById("mb").style.display = "none";
+        }
+        })
+
+    </script>
+
+</body>
+
+</html>

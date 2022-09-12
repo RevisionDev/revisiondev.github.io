@@ -1,0 +1,107 @@
+---
+layout: default
+title: Security Renovation
+---
+
+</div></div>
+<section class="intro">
+    <center>
+        <br>
+        <img src="/assets/images/logo.png" style="border-radius: 50%"
+             height="250" width="250" alt="Loading...">
+        <br><br>
+        <h1 style="color:dimgrey; font-family:'goodtime';">Revision</h1>
+        <br>
+        <h3 style="color:gray;font-family:'goodtime';"> Private Security Consultant</h3>
+        
+        <!--<a href="/about/" class="btn" style="color:white">View More about me</a>-->
+    </center>
+</section>
+<a name="business"></a><a name="private"></a>
+<!-- We reopen main-content and container -->
+<div class="container">
+    <div class="main-content">
+        <!-- Featured
+    ================================================== -->
+        <section class="featured-posts">
+            <div class="section-title">
+                <h2><span style="font-family:NanumSquareRoundR">민간 범죄</span></h2>
+            </div>
+            <div class="row listfeaturedtag">
+                {% for post in site.posts %}
+                {% if post.private == true %}
+                {% include featuredbox.html %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        <!--================================================== -->
+        <a name="org"></a>
+        <section class="featured-posts">
+            <div class="section-title">
+                <h2><span style="font-family:NanumSquareRoundR">기업·기관·정부</span></h2>
+            </div>
+            <div class="row listfeaturedtag">
+                {% for post in site.posts %}
+                {% if post.org == true %}
+                {% include featuredbox.html %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        <!-- ================================================== -->
+        <a name="etc"></a>
+        <section class="featured-posts">
+            <div class="section-title">
+                <h2><span style="font-family:NanumSquareRoundR">교육·자문·정보관리</span></h2>
+            </div>
+            <div class="row listfeaturedtag">
+                {% for post in site.posts %}
+                {% if post.etc == true %}
+                {% include featuredbox.html %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Posts Index
+    ================================================== -->
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page > 0 %}
+        <div id="jumptopageof"></div>
+        {% endif %}
+        {% endif %}
+        <section class="recent-posts row">
+            <div class="col-sm-8">
+                <div class="section-title">
+                    <h2><span style="font-family:NanumSquareRoundR">보안 보고서</span></h2>
+                </div>
+                <div class="masonrygrid row listrecent">
+                    {% for post in paginator.posts %}
+                    {% if post.main == true %}
+                    {% include postbox.html %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <!--  언리스 하나당 엔드언리스 하나 추가                    -->
+                <!-- Pagination -->
+                <div class="bottompagination">
+                    <span class="navigation" role="navigation">
+                        {% include pagination.html %}
+                    </span>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-sm-4">
+                {% include sidebar.html %}
+            </div>
+        </section>
+        <!--
+    <script language="javascript">
+      window.open("/notice.html", "notice", "width=600, height=640, left=965, top=400");
+    </script> -->

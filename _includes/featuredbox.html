@@ -1,0 +1,34 @@
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+<div class="col-sm-6">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-5 wrapthumbnail">
+                <a href="{{ post.url | absolute_url }}">
+                    <div class="thumbnail"
+                         style="background-image:url({{ site.baseurl }}/{{ post.cover}});">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-7">
+                <div class="card-block">
+                    <h2 class="card-title">
+                        <a href="{{ post.url | absolute_url }}">
+                            {{
+ post.title
+                            }}
+                        </a>
+                    </h2>
+                    <h4 class="card-text">
+                        {{
+ post.summary |
+                        truncatewords: 20
+                        }}
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end post --   post.excerpt | strip_html |   -->
