@@ -2,7 +2,7 @@
 layout: page
 cover: assets/images/report/steam.jpg
 title: 정부에 차단된 스팀지역락 우회법
-date: 2022-09-13 00:00:00 +0000
+date: 2022-09-12 00:00:00 +0000
 categories: report
 author: Revision
 main: true
