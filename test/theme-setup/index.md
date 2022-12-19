@@ -4,16 +4,60 @@ title: 안녕Ultimate Guide to setup Prasad Jekyll theme
 comments: true
 ---
 
+<table class="bluetop">
+    <tr><th>위키SW</th><th>제작자</th><th>첫 릴리즈</th></tr>
+    <tr><td>유즈모드위키</td><td>Clifford Adams</td><td>2000년</td></tr>
+    <tr><td>모인모인</td><td>Jürgen Hermann 등</td><td>2000년</td></tr>
+    <tr><td>미디어위키</td><td>Magnus Manske</td><td>2002년</td></tr>
+    <tr><td>도쿠위키</td><td>Andreas Gohr</td><td>2004년</td><td>도쿠위키</td><td>Andreas Gohr</td><td>2004년</td></tr>
+</table>
+
+<br><br>
+
+
+|제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+
+    <br><br>
+
+|제목|내용|설명|
+|:---|---:|:---:|
+|왼쪽정렬|오른쪽정렬|중앙정렬|
+|왼쪽정렬|오른쪽정렬|중앙정렬|
+|왼쪽정렬|오른쪽정렬|중앙정렬|
+
+    <br><br>
+
+|제목|내용|설명|
+|:---|:---:|---:|
+||중앙에서확장||
+|||오른쪽에서 확장|
+|왼쪽에서확장||
+
+    <br><br>
+
+|제목|내용|설명|
+|---|---|---|
+|테스트1|*강조1*|테스트3|
+|테스트1|**강조2**|테스트3|
+|테스트1|<span style="color:red">강조3</span>|테스트3|
+
+<br>
+<br>
 Prasad is the modified form of Affiliates Jekyll Theme.
 
 - **Demo:** https://prasad.cdrrazan.com 안녕 *안녕* **안녕**
 
 <span style="font-size 16;">
->You can view the full live site using this theme <a href="https://cdrrazan.com" target="_blank"> </span>
->HERE.</a> <br>
+    >You can view the full live site using this theme <a href="https://cdrrazan.com" target="_blank">
+</span>
+>HERE.</a>
+<br>
 
->If you need any help open the issue in <a href="https://github.com/cdrrazan/prasad/issues/new"
->target="_blank"> here.</a>
+>If you need any help open the issue in <a href="https://github.com/cdrrazan/prasad/issues/new">target="_blank"> here.</a>
 
 
 <h3> Features특징 </h3>
@@ -108,3 +152,39 @@ comments: true
     - Netlify: Visit [this netlify docs](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/)
 
 <h5> All the images posted here are for blog demo purpose only. </h5>
+
+
+
+<html>
+
+<body>
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .bluetop {
+            border-collapse: collapse;
+            border-top: 3px solid #168;
+        }
+
+            .bluetop th {
+                color: #168;
+                background: #f0f6f9;
+            }
+
+            .bluetop th, .bluetop td {
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+
+                .bluetop th:first-child, .bluetop td:first-child {
+                    border-left: 0;
+                }
+
+                .bluetop th:last-child, .bluetop td:last-child {
+                    border-right: 0;
+                }
+    </style>
+</body>
+</html>

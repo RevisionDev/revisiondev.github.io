@@ -4,7 +4,7 @@ description: Security Renovation
 meta_description: Security Renovation
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.ico
-paginate: 10
+paginate: 8
 baseurl: 
 email: 'revision6@proton.me'
 google_analytics: REVISION
@@ -16,7 +16,7 @@ authors:
   Revision:
     name: Revision
     display_name: Revision
-    image: /assets/images/logo.png
+    image: /assets/images/logo3.png
     email: revision6@proton.me
     web: https://revision.kr
     twitter:

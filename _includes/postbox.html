@@ -9,7 +9,7 @@
                                      alt="{{ post.title }}"> {% endif %}
         </a>
         <div class="card-block">
-            <h2 class="card-title"><a href="{{ post.url | absolute_url }}">{{
+            <h2 class="card-title"><a href="{{ post.url | absolute_url }}"  style="text-decoration-line: none;">{{
                 post.title }}</a></h2>
             <h4 class="card-text">{{ post.excerpt | strip_html |
                 truncatewords:30 }}</h4>
@@ -21,7 +21,7 @@
                      alt="{{ author.display_name }}">
                 </span>
                     <span class="author-meta">
-                <span class="post-name"><a target="_blank"
+                <span class="post-name"><a target="_blank"  style="text-decoration-line: none;"
                                            href="{{ author.web }}">{{ author.display_name }}</a></span><br/>
                 {% endif %}
                 <span class="post-date">{{ post.date | date_to_string }}</span>

@@ -2,24 +2,18 @@
 layout: page
 title: Contact
 ---
-<!--
-<form action="#" method="POST">
-    <div class="form-group row">
-        <div class="col-md-6">
-            <input class="form-control" type="text" name="name"
-                   placeholder="Name">
-        </div>
-        <div class="col-md-6">
-            <input class="form-control" type="email" name="_replyto"
-                   placeholder="E-mail Address">
-        </div>
-    </div>
-    <textarea rows="8" class="form-control mb-3" name="message"
-              placeholder="Message"></textarea>
-    <input class="btn btn-success" type="submit" value="Send">
-</form>-->
+
+
 <head>
     <style>
+        @media (min-width: 975px) {
+        
+        
+        
+        
+        }
+
+
         .pic {
             background: url(/assets/images/카카오톡2.png);
             filter: brightness(100%);
@@ -41,6 +35,28 @@ title: Contact
         #comasc {
             display: none;
         }
+
+        .acc02 {
+            background-color: #87979a;
+            border-color: #87979a;
+            color: #e6e6e6;
+        }
+
+            .acc02:hover {
+                background-color: #87979a;
+                border-color: #87979a;
+                color: #e6e6e6;
+            }
+
+        .ft02 {
+            font-family: Rubik, 'NanumSquareRoundR';
+            font-weight: bold;
+            line-height: 1;
+            font-size: 16px;
+            text-align: center;
+            word-break: keep-all;
+            color: #ffffff;
+        }
     </style>
 </head>
 
@@ -55,7 +71,7 @@ title: Contact
 </p>
 <p>
     <span style="font-size:13pt; word-break: keep-all; font-family:NanumSquareRoundB">
-           리비전은 주민등록번호 전체, 전체 주민등록번호가 기재된 서류, 인감증명서, 본인서명사실확인서, 신용카드 정보 및 비밀번호, 계좌 비밀번호 등의 정보를 묻거나 요구하지 않습니다.
+        리비전은 주민등록번호 전체, 전체 주민등록번호가 기재된 서류, 인감증명서, 본인서명사실확인서, 신용카드 정보 및 비밀번호, 계좌 비밀번호 등의 정보를 묻거나 요구하지 않습니다.
         이와 같은 정보를 묻는다면 해킹 및 사기 피해가 의심되므로 대화 기록을 보존한 채 즉시 경찰 등 수사기관에 신고하시기 바랍니다.
     </span>
 </p>
@@ -65,7 +81,7 @@ title: Contact
 <h4>&nbsp;&nbsp;메일 문의 </h4>
 <div style="float:left; width:61px; height:70px; padding:6px 0;">
     <button type="button" class="btm_image" id="img_btn" onclick="location.href='mailto:revision6@proton.me' "
-            style="background-color:transparent; border-color:transparent; color:transparent; ">
+            style="background-color:transparent; border-color:transparent; color:transparent; border: 0; outline: 0;">
         <img src="/assets/images/mail.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
     </button>
 </div>
@@ -74,7 +90,7 @@ title: Contact
 </div>
 <div style="float:left; width:56px; height:65px; padding:7px 0;">
     <button type="button" class="btm_image" id="img_btn" onclick="copy3(); "
-            style="background-color:transparent; border-color:transparent; color:transparent; ">
+            style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;">
         <img src="/assets/images/copy.png" height="35" width="35" alt="copy" style="border-radius: 50%; cursor:pointer" class="pic2">
     </button>
 </div>
@@ -86,8 +102,8 @@ title: Contact
     <h4>&nbsp;&nbsp;암호화 메일</h4>
 
     <button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='https://keys.openpgp.org/search?q=revision6%40proton.me' "
-            style="background-color:transparent; border-color:transparent; color:transparent; ">
-        <img src="/assets/images/cryptmail.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+            style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;  ">
+        <img src="/assets/images/cryptmail.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer;  border: 0; outline: 0;" class="pic2">
     </button>
 
 
@@ -100,10 +116,13 @@ title: Contact
     </button> -->
 
     <button type="button" class="btm_image" id="img_btn" onclick="location.href='https://keys.openpgp.org/vks/v1/by-fingerprint/7D6517B4CA9E4B285E8AA2CA9AADEAD54CF2A23C' "
-            style="background-color:transparent; border-color:transparent; color:transparent; ">
+            style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;">
         <img src="/assets/images/download.png" height="32" width="32" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
     </button>
-
+    <button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='/assets/revision_public.asc.txt' "
+            style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0; ">
+        <img src="/assets/images/txt.png" height="32" width="32" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
+    </button>
 </div>
 
 
@@ -112,12 +131,12 @@ title: Contact
 
 <h4>&nbsp;&nbsp;채팅 문의</h4>
 <button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='http://pf.kakao.com/_vxjFMxj' "
-        style="background-color:transparent; border-color:transparent; color:transparent; ">
+        style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;">
     <img src="/assets/images/카카오톡2.png" height="40" width="40" alt="KakaoTalk" style="border-radius: 50%; cursor:pointer" class="pic">
 </button>
 
 <button type="button" class="btm_image" id="img_btn" onclick="window.open('about:blank').location.href='https://t.me/revision6'  "
-        style="background-color:transparent; border-color:transparent; color:transparent; ">
+        style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0; ">
     <img src="/assets/images/telegram.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
 </button>
 
@@ -125,12 +144,13 @@ title: Contact
 <br>
 <br>
 <br>
+<!--
 <div>
     <h4>&nbsp;&nbsp;전화 상담</h4>
 </div>
 
 <button type="button" class="btm_image" id="img_btn" onclick="location.href='tel:010-4445-5551' "
-        style="background-color:transparent; border-color:transparent; color:transparent; ">
+        style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;">
     <img src="/assets/images/call.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
 </button>
 
@@ -138,37 +158,73 @@ title: Contact
 
 
 <button type="button" class="btm_image" id="img_btn" onclick="copy4(); "
-        style="background-color:transparent; border-color:transparent; color:transparent; ">
+        style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;">
     <img src="/assets/images/copy.png" height="35" width="35" alt="copy" style="border-radius: 50%; cursor:pointer" class="pic2">
 </button>
 <br>
 
 
 <button type="button" class="btm_image" id="img_btn" onclick="location.href='tel:0504-445-5551' "
-        style="background-color:transparent; border-color:transparent; color:transparent; ">
+        style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0;">
     <img src="/assets/images/fax.png" height="40" width="40" alt="Telegram" style="border-radius: 50%; cursor:pointer" class="pic2">
 </button>
 <h5 id="text5" style="display:inline">0504-445-5551</h5>
 
 <button type="button" class="btm_image" id="img_btn" onclick="copy5(); "
-        style="background-color:transparent; border-color:transparent; color:transparent; ">
+        style="background-color:transparent; border-color:transparent; color:transparent;  border: 0; outline: 0; ">
     <img src="/assets/images/copy.png" height="35" width="35" alt="copy" style="border-radius: 50%; cursor:pointer" class="pic2">
 </button>
 
 <br>
 <br>
 <br>
+        -->
 
-
-<h4>&nbsp;&nbsp;간편 문의</h4>
+<h4>&nbsp;&nbsp;간편 이메일 문의</h4>
+<p>
+    <span style="font-size:16pt; word-break: break-all; font-family:NanumSquareRoundB">
+        &nbsp;&nbsp;간편 이메일 문의는 구글 서버를 이용합니다. 이를 원치 않을시에는 상단 메일 주소를 이용해주시기 바랍니다.<br>
+    </span>
+</p>
+<!--
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7AFJoGXeJVkvUWtPYSJaPy_cHYCfg5SdajgUPdjk5SwAGQw/viewform?embedded=true"
         width="680" height="665" frameborder="0" marginheight="0" marginwidth="0">
     로드 중…
-</iframe>
-
-
+</iframe> -->
 <!-- <div>  <input type="button" value="복사" onclick="copy3()" /> --> <!-- <div id="text3" style="width:90%; ">revision6@protonmail.com</div> -->
 <!-- </div> -->
+<form class="gform" method="POST" data-email="reaver.revision@gmail.com" action="https://script.google.com/macros/s/AKfycbyW2hpfk5gUmnD5TIh1zOcTgRMqD-qF451H0ZMgPBZNqbTLXwR5FeYp6wm-m-XGxYq1/exec">
+    <div class="form-group row">
+        <div class="col-md-6" style="padding:5px 16px 5px 16px">
+            <input class="form-control" type="text" name="name" style="border-color:silver"
+                   placeholder="이름 (익명 가능)">
+        </div>
+        <div class="col-md-6" style="padding:5px 16px 5px 16px">
+            <input class="form-control" type="email" name="_replyto" style="border-color:silver"
+                   placeholder="메일 주소 (전화번호·메일 주소 중 최소 1개 이상 작성)">
+        </div>
+
+        <div class="col-md-6" style="padding:5px 16px 5px 16px">
+            <input class="form-control" type="number" name="_replytonum" style="border-color:silver"
+                   placeholder="전화번호 (기호를 제외한 숫자)">
+        </div>
+    </div>
+    <textarea rows="8" class="form-control mb-3" name="message" style="border-color:silver"
+              placeholder="문의 내용"></textarea>
+    <input class=" ft02 acc02 btn btn-success" type="submit" value="보내기" style=" border: none; box-shadow: none;" >
+
+    <div style="display:none; line-height:1.5;" class="thankyou_message">
+        <!-- You can customize the thankyou message by editing the code below -->
+        <h4>
+            <br>
+            감사합니다. 메일이 발송되었습니다. 빠르게 연락드리겠습니다.
+        </h4>
+    </div>
+</form>
+
+
+<script data-cfasync="false" type="text/javascript"
+        src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 <script>
 

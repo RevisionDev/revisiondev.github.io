@@ -1,378 +1,525 @@
-<!DOCTYPE html>
-<html lang="ko">
+﻿---
+layout: post
+cover: assets/images/business/crypt.jpg
+title: 민간 정보보안 · 프라이버시 보호
+date: 2022-09-05 05:55:00 +0900
+categories: business
+author: Revision
+private: true
+summary: 암호화·와이핑·안티포렌식
+<br> 우회 접속·프라이버시·익명화
+---
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
-    <title>{{ page.title }} - Revision</title>
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-    {% endif %}
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-          crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i"
-          rel="stylesheet">
-    <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/assets/css/user.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-          crossorigin="anonymous">
-
-    {% seo %}
-
-    {{site.sharethis}}
-
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', '{{site.google_analytics}}', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-</head>
-
-{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%
-endcapture %}
-<body class="{{ layout }}">
-    <!-- Begin Menu Navigation
-    ================================================== -->
-    <header class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-        <button class="navbar-toggler navbar-toggler-right" type="button"
-                data-toggle="collapse" data-target="#navbarsWow"
-                aria-controls="navbarsWow" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container">
-
-            <!-- Begin Logo -->
-            <a class="navbar-brand" href="{{ site.baseurl }}/">
-                {% if site.logo == true %}
-                <img src="/assets/images/logo.png" alt="{{ site.name }}">
-                {% else %}
-                <span style="font-family:goodtime">Revision</span>
-                {% endif %}
-            </a>
-            <!-- End Logo -->
-            <!-- Begin Menu -->
-            <div class="collapse navbar-collapse" id="navbarsWow">
-
-                <!-- Begin Menu -->
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/#private"><strong>민간 범죄</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/#org"><strong>기업·기관·정부</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/#org"><strong>대테러</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/#etc"><strong>교육·자문·기타</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/#etc"><strong>사회공헌</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/report"><strong>보안 보고서</strong></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ site.baseurl }}/vision"><strong>비전</strong></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link highlight" href="{{ site.baseurl }}/contact" style="font-family:NanumSquareRoundR; font-weight:bold;">상담 문의</a>
-                    </li>
-                </ul>
-                <!-- End Menu -->
-
-            </div>
-        </div>
-    </header>
-
-
-    <!-- End Menu Navigation
-    ================================================== -->
-
-    <div class="site-content">
-
-        <div class="container">
-
-            <!-- Site Title
-            ================================================== -->
-
-            <div class="mainheading" style="display:none;">
-                <h1 class="sitetitle">{{ site.name }}</h1>
-                <p class="lead">
-                    {{ site.description }}
-                </p>
-            </div>
-
-            <!-- Content
-            ================================================== -->
-            <div class="main-content">
-                {{ content }}
-            </div>
-
-        </div><!-- /.container -->
-        <!-- Before Footer
-        ================================================== -->
-        <style>
-            .acc2 {
-                background-color: #6b6b6b;
-                border-color: #6b6b6b;
-                color: #e6e6e6;
-            }
-
-                .acc2:hover {
-                    background-color: #545454;
-                    border-color: #545454;
-                    color: #e6e6e6;
-                }
-
-            .ft2 {
-                font-family: Rubik, 'NanumSquareRoundR';
-                font-weight: bold;
-                line-height: 1;
-                font-size: 16px;
-                text-align: center;
-                word-break: keep-all;
-                color: #ffffff;
-            }
-        </style>
-        <div class="beforefooter">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <h3 style="line-height:1.5">Security Renovation with Revision</h3>
-
-                        <p style="font-family:NanumSquareRoundEB; font-size:16px; font-weight:normal; color:#f0f0f0; word-break:keep-all ">
-                            당한 후에 범인을 잡는 것보다 중요한 것은, 당하지 않는 것입니다.
-
-                        </p>
-                        <br>
-                        <a class="ft2 acc2 btn btn-primary btn-lg" href="/contact" target="_self">
-                            상담 문의
-                        </a>
-                    </div>
-                    <div class="col-md-4 text-right footersocial">
-                        <h5>Connect with me</h5>
-                        <a href="https://www.youtube.com/channel/UCjY4R0fpuEQl2kh9iHn55QA" target="_blank " style="text-decoration-line: none;">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://www.instagram.com/revision.kr/" target="_blank" style="text-decoration-line: none;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://github.com/RevisionSix/revisionsix.github.io" target="_blank" style="text-decoration-line: none;">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Begin Footer
-        ================================================== -->
-        <style>
-            .jj {
-                line-height: 1.5;
-            }
-        </style>
-        <footer class="footer">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="footer-widget">
-                            <h5 class="title jj">Security Renovation</h5>
-                            <p style="line-height:1.5; word-break:keep-all">
-                                리비전은 전문적인 민간 보안컨설턴트로<br> 보안의 혁신을 추구합니다.
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <script language="javascript">
-                        function showPopup() { window.open("notice.html", "notice", "width=600, height=600, left=1000, top=400"); }
-                    </script>
-
-
-                    <div class="col-sm-3">
-                        <div class="footer-widget">
-                            <h5 class="title">Menu</h5>
-                            <ul>
-                                <!--  <li>
-                    <a href="{{ site.baseurl }}/sitemap.xml">SiteMap</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/feed.xml">
-                        Live
-                        Feed
-                    </a>-->
-                                <li> <a href="" javascript:void(0);" onclick="showPopup();" attr-a="onclick : attr-a">공지사항</a></li>
-                                <li><a href="/privacypolicy">개인정보처리방침</a></li>
-                                <li><a href="/payment">결제 정보 안내</a></li>
-                                <li><a href="/recruitment">채용 및 인재상</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="footer-widget">
-                            <h5 class="title">Category</h5>
-                            <ul>
-                                <li><a href="/#business">사업 분야</a></li>
-                                <li><a href="{{ site.baseurl }}/report">보안 보고서</a></li>
-                                <li><a href="{{ site.baseurl }}/vision">비전</a></li>
-                                <li><a href="{{ site.baseurl }}/contact">상담문의</a></li>
-                                <!--     <li><a href="#">Tech</a></li>
-
-                <li><a href="/category/blog/">Personal</a></li> -->
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="footer-widget textwidget">
-                            <h5 class="title">First protect <br>First prevention </h5>
-                            <p style="line-height:1.5;word-break:keep-all">
-                                리비전은 당하고 대처하지 않습니다. <br>먼저 지키고 사전에 막겠습니다.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="copyright">
-                    <p class="pull-left">
-                        Made with <a href="https://jekyllrb.com"
-                                     target="_blank">
-                            jekyll
-                            <!--
-                            <img
-                                src="/assets/images/jekyll.png" width="32px"
-                                height="32px"/>-->
-                        </a>
-                        - Copyright © Revision - {{ site.time | date: "%Y" }}
-                    </p>
-                    <p class="pull-right">
-                        <!-- Please, leave credit to author unless you own a commercial license: https://www.wowthemes.net/freebies-license/ -->
-                        <a target="_blank"
-                           href="https://www.wowthemes.net/free-jekyll-template-affiliates/">
-                            "Affiliate
-                            Theme"
-                        </a> - Modified by <a target="_blank" href="https://cdrrazan.com">@cdrrazan</a> - by <a href="https://revision.kr">Revision</a>
-                    </p>
-                    <div class="clearfix"></div>
-                </div>
-
-            </div>
-
-        </footer>
-        <!-- End Footer
-        ================================================== -->
-
-    </div> <!-- /.site-content> -->
-    <!-- JavaScript-->
-    <!--================================================== -->
-
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-
-    <script src="{{ site.baseurl }}/assets/js/user.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-            crossorigin="anonymous"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-            crossorigin="anonymous"></script>
-
-    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
-
-    <script type='text/javascript'
-            src='{{ site.baseurl }}/assets/js/masonry.pkgd.min.js'></script>
-
-    <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
-
-
-    <!-- 상단으로 이동하기 버튼 -->
-    <div style="position:fixed; bottom:20px; right:20px; z-index:99;" class="btn_gotop">
-        <a href="#doz_header">
-            <img src="/assets/images/top.png" style="width:40px">
-        </a>
-    </div>
-
-
     <style>
-        .btn_gotop {
-            display: none;
-            position: fixed;
-            bottom: 20px; /* 탑버튼을 화면의 가장 아래에서 몇 픽셀 떨어뜨릴 것인지 정하세요*/
-            right: 20px; /* 탑버튼을 화면의 가장 오른쪽에서 몇 픽셀 떨어뜨릴 것인지 정하세요*/
-            z-index: 999;
-            border: 0px solid #627289;
-            outline: none;
-            background-color: #627289;
-            opacity: 0.6;
-            cursor: pointer;
-            padding: 0px 0px;
-            border-radius: 100%;
+        .pic:hover {
+            color: forestgreen;
+            display: inline;
         }
     </style>
 
+</head>
+<center>
+    <div style="background-color:#121212;">
+        <br>
 
-    <script>
-        $(window).scroll(function(){
-        if ($(this).scrollTop() > 600){
-        $('.btn_gotop').show();
-        } else{
-        $('.btn_gotop').hide();
+        <img src="/assets/images/business/crypt1.jpg" style="border: 0 solid black">
+
+        <br><br><br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all;">
+            지금 내 비밀이 유출되지는 않을까 걱정하고 계시지는 않습니까?<br>
+            컴퓨터나 스마트폰 남이 들여다보면 어쩌나 걱정하고 계시지는 않습니까?<br><br>
+            한번 유출당한 당신의 정보는 평생 인터넷에 남아있습니다.<br>치명적인 정보유출, 평생 당신의 족쇄가 될 수도 있습니다.
+        </h3>
+
+        <br><br><br><br>
+        <h4 style="display:inline; line-height:2; color:#f6f6f6;  word-break: keep-all; ">
+            리비전은 분실 · 압수 · 수색 등 상황 발생시 행동요령,<br> 신고·고소 등 단계별 대응조치 컨설팅은 물론<br><br>
+            차단 우회 · VPN · Tor · Tor 서버 운영 · 서버 파일관리부터<br>
+            개인정보보호를 위한 추적방지 · 프라이버시 보호 · 익명화<br>
+            PC · 스마트폰 · 저장장치 안티포렌식<br>
+            리눅스 · 저장장지 등 활용한 정보보안화까지 <br>
+            고객의 눈높이와 필요에 맞춰 손쉽게 대비할 수 있는 맞춤형 컨설팅을 진행합니다.
+        </h4><br><br><br><br>
+
+
+        <img src="/assets/images/business/crypt2.jpg" style="border: 0 solid black">
+
+        <br><br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            정부·검·경·공수처·군사경찰 등<span style="color:#ae0000; font-weight:normal;"> 수사기관</span>의 <span style="color:#ae0000; font-weight:normal;">권력남용</span><br><br>
+        </h3><br>
+        <h4 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            경찰이 신분증을 요구하거나 휴대폰 등 소지물품의 제시 및 잠금해제를 요구한 적이 있지 않나요?<br>
+            협박성 발언에 겁을 먹고 요구에 순응하지는 않았나요?<br><br>
+
+            이제 순응하지 마십시오.<br>
+            당신이 범죄자라고 의심되거나 범죄사실을 안다고 생각되는 이유를 물으십시오.<br>
+            신분증 및 소속·성명의 제시를 요구하고 질문의 목적과 이유를 물으십시오. <br>
+            당신은 '그냥' 검문을 거절할 수 있습니다. (운전 중 운전면허증 제시 요구 제외)<br>
+            물건의 수색 또는 잠금해제 요구 등에는 절대로 응하지 마십시오. 어떠한 법적 근거도 존재하지 않습니다.  <br>
+            동행 요구를 거절하십시오. <br><br>
+
+            억울한 일은 언제 당할지 모릅니다. <br>
+            사생활과 영업비밀 억울하게 누출될 수 있습니다.
+        </h4><br><br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            당한 후에는 대비할 수 없습니다. 사전에 대비하십시오.<br>
+            리비전은 당신의 사생활과 비밀을 완벽하게 지켜드립니다.<br>
+        </h3>
+
+        <br><br><br>
+
+        <img src="/assets/images/business/crypt3.jpg" style="border: 0 solid black">
+
+        <br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            날이 갈수록 심해지는 대한민국의<span style="color:#ae0008"> 차단과</span> <span style="color:#ae0008"> 검열</span><br><br>
+        </h3>
+
+        <h4 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            인터넷부터 만화 · 소설 · 게임 · 그림까지<br>
+            이게 끝이 아닙니다. 차단과 검열은 계속 될 것입니다. <br><br>
+
+            대한민국은 중국과 동일한 방법으로 국민을 검열하며 문화를 차단하고 있습니다.
+        </h4><br><br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            리비전은 무조건 <span style="color:forestgreen">해답</span>을 찾아냅니다.
+        </h3><br><br><br>
+        <h4 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            iOS · 안드로이드 · 윈도우 · 리눅스<br>
+            IP · DNS · SNI · MAC 주소 · IMEI · VPN · Tor <br> <br>
+
+            너무 어려우신가요? 그렇다면 리비전을 만날 시간입니다.
+        </h4><br><br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            리비전은 고객의 필요와 눈높이에 따라 맞춤형 컨설팅을 진행합니다.
+        </h3><br><br><br><br><br>
+
+        <img src="/assets/images/business/crypt4.jpg" style="border: 0 solid black"><br><br>
+        <h3 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            고객정보의 완전한 보호
+        </h3><br><br><br>
+        <h4 style="display:inline; line-height:2; color:#f6f6f6; word-break: keep-all; ">
+            리비전은 모든 고객 정보를 암호화하며, 컨설팅이 종료되거나 고객 요청시 고객의 모든 개인정보와 컨설팅 관련 정보를 복구 불가능한 방법으로 완벽하게 소거합니다.<br>
+            고객의 컨설팅 내용을 정부 · 기관 등 그 누구에게도 유출하지 않습니다.<br><br>
+
+            리비전은 고객의 정보를 최우선으로 생각합니다.<br>
+            리비전의
+            <a href="/privacypolicy" style="color:forestgreen; " target="_blank" class="pic24">개인정보처리방침</a>을 확인하십시오.
+        </h4><br>
+        <br><br><br><br><br>
+
+
+        <h3 style="display:inline; line-height:1.7; color:#f6f6f6; word-break: keep-all; ">
+            보안 컨설팅 더 이상 기업이나 기관만의 것이 아닙니다.<br>
+            큰 비용이 필요하지도 않습니다.<br><br>
+            민간보안 전문컨설턴트 리비전을 만나보십시오.
+        </h3>
+        <br><br><br><br><br>
+        <h4 style="display:inline; line-height:1.7; color:#f6f6f6; word-break: keep-all; ">
+            리비전은 범죄에 노출된 더욱더 취약한 약자를 위해 존재합니다.<br>
+            리비전의 사회적 약자를 위한 활동은 <a href="/business/2022/09/02/social.html" style="color:forestgreen; " target="_blank" class="pic24">사회 공헌</a>에서 확인할 수 있습니다.
+            <br><br><br>
+            우리 사회 곳곳의 모두를 위한 리비전의 완벽하고 빈틈없는 컨설팅을<br>저렴하고 합리적인 가격으로 경험해보십시오.
+        </h4>
+        <br><br><br><br>
+        <h3 style="display:inline; line-height:1.7; color:#f6f6f6; word-break: keep-all; ">
+            가장 안전하다고 느낄때가 가장 위험한 순간입니다.<br>리비전과 함께 하십시오.
+        </h3>
+
+
+
+        <br><br><br><br><br>
+    </div>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <h3 style="display:inline; line-height:1.7;  word-break: keep-all; ">
+        컨설팅 세부 안내
+    </h3>
+</center>
+<br>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7;  word-break: keep-all; "> 미니멀 컨설팅</h4>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; "> 분실 · 압수 · 수색 등 상황 발생시 행동요령</h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 신고 · 고소 등 단계별 대응조치</h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> PC · 스마트폰 등 암호화 및 소거</h5>
+
+<br>
+<br>
+<br>
+
+- <h4 style="display:inline; line-height:1.7;  word-break: keep-all; "> 맥시멈 암호화 · 안티포렌식 컨설팅</h4>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; "> 미니멀 컨설팅 기본 포함</h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> USB · 저장장치 등 암호화 및 파기 교육 </h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 고급 암호화 및 소거 </h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 리눅스 등 멀티 OS 암호화 및 기본 교육 </h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 파일 관리 및 전송 안전 교육  </h5>
+
+<br>
+<br>
+<br>
+
+- <h4 style="display:inline; line-height:1.7;  word-break: keep-all; "> 맥시멈 사이버 프라이버시 컨설팅</h4>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; "> 미니멀 컨설팅 기본 포함</h5>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; "> USB · 저장장치 등 이용 사이버 추적방지 교육</h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 고급 추적방지 및 프라이버시 보호 </h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 리눅스 등 멀티 OS 익명화 및 기본 교육 </h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 파일 관리 및 전송 안전 교육  </h5>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> Tor 서버 운영 및 파일 관리</h5>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+    <h3 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; ">
+        검찰과 경찰을 만날 일이 없을 것이라고 생각합니까?
+    </h3>
+</center>
+<br>
+<br>
+<br>
+
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 억울한 일은 누구에게나 닥칠 수 있습니다. </h4>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px; font-weight:normal;">
+    지금도 아래와 같은 일들이 일어나고 있습니다.
+</span>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 무고로 인한 고소 · 고발</h4>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px; font-weight:normal;">
+    현재 수사기관은 추가적인 증거 없이 오직 고소인의 진술 하나만으로 압수·수색 등 강제적 수사 절차에 나아갑니다.
+    <br>무고로 대응하면 될까요? 무고죄의 성립은 고의 입증이 더욱더 어렵습니다. <br>
+    치밀하고 지능적으로 준비한 무고 사건에서 고소인은 얼마든지 손쉽게 빠져나갈 수 있습니다. 피해는 오직 당신의 몫입니다. <br><br>
+    실제 사례로는 연예인 모씨 사건 등을 포함한 수많은 성폭력 무고 사건 등이 있습니다.
+</span>
+<br>
+<br>
+
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 수사기관의 회유 · 협박 · 자백 강요</h4>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px; font-weight:normal;">
+    경찰 등 수사기관에서는 마치 수사에 협조하지 않으면 죗값이 더 커진다는 등으로 회유하거나 협박하며 자백이나 의무없는 일을 하게끔 강요합니다. 수사에 협조하지 않는다고 죗값이 커지지 않습니다. (단, 처음부터 <strong>자발적으로 신고하는 등의 자수</strong>는 임의적 감경 사유 해당. 그 외 자백은 재판상 양형단계 고려.) 당연히 소지품을 제출하거나 잠금이나 암호를 해제해줄 의무 또한 없습니다. <br><br>
+    실제 사례로는 과거의 약촌오거리 사건, 삼례 나라슈퍼 사건 등이 있으며 현재도 수많은 경찰관들이 억울하게 누명을 쓴 시민들을 상대로 겁을 주며 의무없는 일을 하게끔 강요하고 있습니다.
+</span>
+<br>
+<br>
+
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 무엇 하나 나오기만을 기대하는 별건 수사</h4>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px; font-weight:normal;">
+    수사기관에서는 본 사건 성립이 어려울 시에 별건 사건이라도 만들어낼 목적으로 무차별적인 압수·수색을 하거나 별건 사건을 통해 회유 · 협박 또는 자백을 강요하기도 합니다. <br><br>
+    예를 들어 성폭력으로 무고당한 자를 압수·수색한 결과 나온 토렌트 성인물 하나로 성적 도착이 있는 것으로 몰아가거나 음란물 유포 등으로 처벌해버리겠다고 협박할 수 있습니다. 살인이나 상해 등 억울한 누명을 쓴 사람에게는 평소 만화를 보거나 게임을 했다는 이유로 반사회적인 폭력 성향을 띄는 것으로 몰아가거나 저작권법을 어겼다고 협박할 수도 있습니다.
+</span>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 무의미한 보복성 장기간 압수로 인한 영업방해 및 사회생활 지장 초래</h4>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: break-all; font-size:20px; font-weight:normal;">
+    수사기관에서는 단순히 수사에 협조에 응하지 않아 수사관 자신들의 기분이 나쁘다는 이유로 압수·수색 제도를 악용하여 고의적으로 영업을 방해하거나 사회생활에 지장을 초래하기도 하며 고의로 명예를 훼손하는 경우가 다반사입니다.
+</span>
+<br>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: break-all; font-size:20px; font-weight:normal;">
+    실제 사례로는 단순히 자신의 컴퓨터에서 인터넷 브라우저의 F12키를 눌러 게임 점수를 높였다는 이유로 경찰에 의한 대대적인 가택 압수·수색을 당한 사라진초밥십인분 사건이 있습니다. <br>
+    이 사건은 서버를 통한 해킹도 아니며 고급 기술이 필요한 것도 아닙니다. C언어 한줄 몰라도 되며 세 살짜리 아이도 할 수 있을 정도의 단순한 장난 수준일 뿐입니다.<br>
+    하지만 경찰은 피해자를 속여 자택에 찾아왔으며, 피해자는 경찰의 잠금 해제 요구에도 성실히 응했지만 경찰은 "진술을 거부하는 것이냐"며 협박하였고 안방의 서랍부터 옷장, 가방까지 모든 곳을 뒤졌습니다. <br>
+    결국 경찰은 피해자가 F12키 한번 눌렀다는 이유로 '하드디스크, 노트북, 휴대폰 문자 메시지와 통화기록, 카카오톡 등 메신저 대화 기록과 사진, 동영상, 문서 파일, 연락처, 메모, 음성 녹음 파일, 전자우편, 인터넷 접속 기록, 삼성·구글·네이버 등 클라우드 저장 자료, 수첩, 메모, 출력물'까지 사생활 정보까지 모조리 압수해갔습니다.
+</span>
+<br>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: break-all; font-size:20px; font-weight:normal;">
+    또 다른 피해자에게 경찰은 "전자기기를 다 꺼내라, 휴대폰과 노트북 비밀번호를 다 풀어"라고 명령했고, 피해자는 이에 협조했지만 경찰은 옷장 서랍 등을 모조리 뒤졌고 낚시용 칼을 보고 "칼은 왜 가지고 있냐"고 따져 묻거나 지휘관으로 보이는 경찰은 의자에 앉아 주식을 보거나 졸고 있는 추태를 부렸습니다.<br><br>
+    세번째 피해자에도 역시 경찰은 휴대전화 비밀번호를 풀라고 강요했고 "범죄 사실을 자백하고 쉽게 쉽게 좀 끝내자"라고 협박하거나, 피해자를 압박하는 분위기를 조성하며 정식 조사실도 아닌 압수수색 현장에서 "여기서 그냥 진술서 쓰고 쉽게 끝내자"고 협박하며 피해자의 침실과 방들을 뒤져 하드디스크와 휴대전화를 압수해갔습니다. 피해자는 경찰의 강압적인 수사로 직장까지 잃었으며 충격으로 인해 우울증까지 앓고 있으며, 사건 몇달이 지나도록 여전히 휴대폰을 돌려받지 못한 채 검찰에 송치까지 된 상태입니다.<br><br>
+    이들 외에도 수많은 시민들이 동일한 장난을 쳤지만, 정치권력자에 비판적인 닉네임을 사용한 이들만 같은 날에 지역이 다른데도 불구하고 경찰청 본청의 지시 아래 서울지방경찰청과 경기남부지방경찰청의 대대적인 압수수색을 동시에 기습적으로 받은 것입니다. 정부와 경찰은 어린 학생들이 즐기는 플래시 게임들마저 심의를 받지 않았다는 이유로 모조리 차단하였지만, 이 사건의 심의받지 않은 **불법 게임은 그 어떠한 제재도 받지 않은 채** 인터넷 사이트에 당당히 게시되었으며, **정부는 이를 방조하면서 오히려 국민을 탄압하는 수단으로 사용**하였습니다.
+</span>
+<br>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: break-all; font-size:20px; font-weight:normal;">
+    또 다른 사례로는 모 검사의 아이폰 압수수색 사건이 있습니다. 모 검사는 일방적인 정치권과 언론의 매도로 무고를 당해 무려 2년이 넘는 시간동안 아이폰을 압수당하고 돌려받지 못했습니다. <br>
+    현재의 포렌식 기술은 제로 데이 공격이 불가능한 이상, 기기를 복제하여 브루트 포스 공격을 하는 것이 최선이며 그러한 포렌식 기술이 전세계에서 가장 뛰어난 이스라엘의 셀레브라이트사의 기술로도 암호해제가 불가능한 것이 뻔히 예상되며, 포렌식이 불가능하다는 전문가들의 의견에도 불구하고 정치적인 이유로 끝까지 피해자를 물고 넘어졌던 것입니다.
+</span>
+<br>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: break-all; font-size:20px; font-weight:normal;">
+    결국 2년이 지나서야 무혐의 처분과 함께 아이폰을 반환받았지만, 이는 그동안 기소가 이루어진 것도 아니면서 검찰 수사단계에서만 국민의 재산을 2년 넘도록 강탈하고 있었던 것을 뜻합니다. 죄없는 국민의 휴대폰을 검찰이 빼았아가 돌려주지 않은 것으로, 사실상 피해자는 자신의 명예와 재물을 강탈당함과 동시에, 업무나 사회생활에 지장을 받지 않기 위해서는 결국 새로운 휴대폰을 구입할 수 밖에 없었을 것입니다. 얼핏보면 약 150만 원 정도의 재산상 피해지만, 그 동안 조사에 응하는데 들인 시간과 교통비만 해도 수백만 원에 달하며 그 외에 정신적 스트레스와 압박감은 계산조차 불가능합니다. 이러한 피해를 경제적 여유가 전혀 없는 일반인이 당한다면 어떻게 될까요?
+</span>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 리비전은 단 1회의 전문적인  컨설팅으로 완벽한 안전을 보장합니다.</h4>
+<br>
+  - <h5 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 일방적 컨설팅이 아닙니다. 고객과의 소통을 통해 고객이 만족하기 전까지 컨설팅은 끝나지 않습니다. </h5>
+<br>
+  - <h5 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; ">리비전은 기존 경비업체를 이용중이어도 업체의 빈틈을 찾아내 빈틈없이 보강해 드리겠습니다.</h5>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 안전의 한계는 없습니다. 컨설팅을 통해 더욱더 안전해지십시오.</h4>
+<br>
+<br>
+<br>
+<br>
+<br><center>
+    <h3 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; ">
+        컨설팅 주의사항
+    </h3> <br><br><br>
+</center>
+
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 컨설팅은 익명 진행이 가능하며 고객이 원하지 않는 정보는 묻지 않으며, 말할 필요도 없습니다. </h4>
+<br>
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 현재 형사 및 관련 소송 사건이 진행중인 경우, 관련 법령상 해당 컨설팅은 불가능합니다. 만약 컨설팅 도중 형사 및 소송사건이 진행중임이 드러날 시에는 즉시 컨설팅이 종료되며, 환불은 불가능합니다. 이러한 사항은 사전에 고지되며, 동의 후에 컨설팅이 가능합니다.</h4>
+- <h4 style="display:inline; line-height:1.7; color:#000000; word-break: keep-all; "> 리비전은 일이 일어나고 피해를 본 후 대처하는 것보다, 일이 일어나기 전 미리 예방하는 것을 목표로 합니다. 사후에는 늦습니다. 반드시 사전에 대비하십시오.</h4>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<center>
+    <h3 style="display:inline; line-height:1.7;  word-break: keep-all; ">
+        비대면 정보보호 컨설팅
+    </h3>
+</center>
+<br>
+<br>
+
+- <h4 style="display:inline; line-height:1.7;  word-break: keep-all; ">   괜한 의심을 살까 걱정되시거나 내 개인정보를 알리고 싶지 않으신가요?</h4>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7;  word-break: keep-all; ">   리비전은 비대면 정보보호 컨설팅을 원칙으로 합니다.</h4>
+<br>
+  > <span style="font-weight:bold; color:forestgreen;">
+    단, 고객 요청시 현장출장 및 직접대면 컨설팅이 가능하나 출장비가 부과되거나 장거리, 기타 도서 지역 등은 출장이 불가할 수 있습니다.
+    <br>리비전은 전문성 없는 하위 직급 직원만을 늘려 겉으로 보이는 규모만을 늘리거나, 수준 낮은 서비스를 제공하지 않습니다.<br> 투자만을 유치하기 위해 허울만 그럴듯한 허술한 경영을 하지도 않습니다. <br>전문성 있고 확실한 책임이 있는 대표 직급 등 소수 정예 분석관이 직접 컨설팅합니다.
+</span>
+
+<br>
+- <h4 style="display:inline; line-height:1.7; word-break: keep-all; ">  이름, 주소, 전화번호 등 기타 개인정보를 요구하지 않습니다. <br>고객이 원하는 수단(카카오톡·텔레그램 등 메신저, 이메일 등)으로 컨설팅이 가능하며 <br>원하지 않는 정보는 절대로 묻지 않습니다. </h4>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">
+    고객이 원할시 비밀채팅이나 시그널 등 타 메신저 이용 · 별도의 암호화폐 결제(협의 필요)도 가능합니다.
+</h5>
+<br>
+<br>
+- <h4 style="display:inline; line-height:1.7; word-break: keep-all; "> 내 사생활이나 개인정보가 노출될까 걱정되십니까?</h4>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">
+    리비전은 고객정보와 컨설팅 내용을 정부와 기관을 포함한 그 누구에게도 유출하지 않습니다.
+</h5>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">
+    리비전은 컨설팅 중 고객의 모든 정보를 정부기관조차 해독할 수 없도록 암호화하여 보관합니다.
+</h5>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">
+    컨설팅 종료 또는 고객이 지정한 사후관리기간 종료시에는 고객의 모든 정보를 절대 복구할 수 없는 방법으로 파기합니다.
+</h5>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; "> 리비전의 고객 최우선 <a href="/privacypolicy" style="color:forestgreen" target="_blank" class="pic24">개인정보처리방침</a>을 확인하십시오. </h5>
+
+
+<center>
+    <br><br><br><br><br><br><br>
+    <h3 style="display:inline; line-height:1.7;  word-break: keep-all; ">
+        가격 정책
+    </h3>
+</center>
+<br>
+<br>
+<center>
+    <span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px; font-weight:bold;">리비전은 투명한 가격 공개 정책을 실시합니다.</span>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <h4 style="display:inline; line-height:1.7;  word-break: keep-all; ">
+        미니멀 컨설팅
+    </h4>
+</center>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">  1인 기준</h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">3만원</span>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 정보보안 · 프라이버시 컨설팅 외 다른 컨설팅 동시 이용시 할인가 </h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">2만원</span>
+<br>
+<br>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+    <h4 style="display:inline; line-height:1.7;  word-break: keep-all; ">
+        맥시멈 암호화 · 안티포렌식 컨설팅
+    </h4>
+</center>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">  1인 기준</h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">5만원</span>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 정보보안 · 프라이버시 컨설팅 외 다른 컨설팅 동시 이용시 할인가 </h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">3만원</span>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center><h4 style="display:inline; line-height:1.7;  word-break: keep-all; "> 맥시멈 사이버 프라이버시 컨설팅</h4> </center>
+<br>
+<br>
+<br>
+
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">  1인 기준</h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">5만원</span>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 정보보안 · 프라이버시 컨설팅 외 다른 컨설팅 동시 이용시 할인가 </h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">3만원</span>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center><h4 style="display:inline; line-height:1.7;  word-break: keep-all; "> 맥시멈 종합 패키지 컨설팅</h4> </center>
+<br>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; "> 맥시멈 종합 패키지는 암호화 · 안티포렌식 및 사이버 프라이버시 컨설팅이 모두 포함된 상품입니다.</h5>
+<br>
+  - <h5 style="display:inline; line-height:1.7; word-break: keep-all; ">  1인 기준</h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">7만원</span>
+<br>
+<br>
+  - <h5 style="display:inline; line-height:1.7;  word-break: keep-all; "> 정보보안 · 프라이버시 컨설팅 외 다른 컨설팅 동시 이용시 할인가 </h5>
+<br>
+<span style="display:inline; line-height:1.7;  word-break: keep-all; font-size:20px;">6만원</span>
+<br>
+<br>
+
+
+
+
+<br>
+<br>
+<br>
+
+<center>
+    <h3 style="display:inline; line-height:1.7;word-break: keep-all; ">
+        리비전은 언제나 고객만을 생각합니다.<br>지금 리비전과 함께 하십시오.
+    </h3>
+</center>
+
+
+<html>
+<body>
+    <style>
+        .acc3 {
+            background-color: #6b6b6b;
+            border-color: #6b6b6b;
+            color: #e6e6e6;
         }
-        });
-        $('.btn_gotop').click(function(){
-        $('html, body').animate({scrollTop:0},400);
-        return false;
-        });
-    </script>
+
+            .acc3:hover {
+                background-color: #545454;
+                border-color: #545454;
+                color: #e6e6e6;
+            }
+
+        .ft3 {
+            font-family: Rubik, 'NanumSquareRoundR';
+            font-weight: bold;
+            line-height: 1;
+            font-size: 16px;
+            text-align: center;
+            word-break: keep-all;
+            color: #ffffff;
+        }
+
+        .pic24 {
+            color: black;
+            word-break: keep-all;
+            font-family: NanumSquareRoundEB;
+            text-decoration-line: none;
+            font-weight: normal;
+        }
+
+        a.pic24 {
+            color: forestgreen;
+            word-break: keep-all;
+            font-family: NanumSquareRoundEB;
+            text-decoration-line: none;
+            font-weight: normal;
+        }
 
 
-
-
-
-
-
-
-
+            a.pic24:hover {
+                color: forestgreen;
+                word-break: keep-all;
+                font-family: NanumSquareRoundEB;
+                text-decoration-line: none;
+                font-weight: bold;
+            }
+    </style>
+    <br><br>
+    <center>
+        <a class="ft3 acc3 btn btn-primary btn-lg" onclick="location.href='/contact' " style="color: #e6e6e6; font-size: 16px;">
+            상담 문의
+        </a><br><br>
+    </center>
 </body>
-
 </html>
+
+
+
+
